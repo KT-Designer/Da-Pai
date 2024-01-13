@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <title>大牌炙烤雞腿飯</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSMLC3SFYT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BSMLC3SFYT');
+    </script>
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <div class="topbar">
+        <img src="./images/icon_time.svg" alt="">
+        <p>營業時間：9:00 am ~ 17:00 pm</p>
+    </div>
+
+
+
+    <header class="header">
+        <div class="logo">
+            <img src="./images/logo.png" alt="">
+        </div>
+        <div class="menu">
+            <i class="fa-solid fa-bars" id="mymenu"></i>
+        </div>
+        <nav class="navbar">
+            <div class="off">
+                <i class="fa-solid fa-xmark" id="close"></i>
+            </div>
+            <ul>
+                <li class="nav-board">
+                    <div class="billboard">營業中</div>
+                </li>
+                <li><a class="overline active" href="#about">關於我</a></li>
+                <li><a class="overline" href="#allmenu">菜單</a></li>
+                <li><a class="overline" href="#contact">預訂便當</a></li>
+            </ul>
+        </nav>
+        <div class="board">
+            <div class="billboard" id="online">營業中</div>
+        </div>
+    </header>
+
+
+
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/bg_1.png" />
+                    <div class="text">
+                        <p class="hot">熱⬦門⬦推⬦薦</p>
+                        <h1>大牌炙烤雞腿飯</h1>
+                        <h6>堅持嚴選頂級食材，給大眾的是價格實惠又美味的料理超值便當。酥脆多汁的雞腿，每一口都充滿濃厚的美味，大牌便當絕對是您的不二之選。</h6>
+                        <div class="money">
+                            <p><span class="dollar">$</span><span class="sale">79</span></p>
+                            <p class="price">$100</p>
+                        </div>
+                        <div class="container">
+                            <a class="phone" href="#contact">電話預訂</a>
+                            <a class="bento" href="#allmenu">其他便當</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/bg_2.png" />
+                    <div class="text">
+                        <p class="hot">熱⬦門⬦推⬦薦</p>
+                        <h1>韓式泡菜豬肉飯</h1>
+                        <h6>品嚐本店招牌之一的清新無腥味家香豬梅花，搭配微辣的韓式泡菜，再加上金黃蛋黃，帶來絕妙滋味與口感。這碗泡菜豬肉蓋飯，絕對是本店的招牌便當之一。</h6>
+                        <div class="money">
+                            <p><span class="dollar">$</span><span class="sale">79</span></p>
+                            <p class="price">$90</p>
+                        </div>
+                        <div class="container">
+                            <a class="phone" href="#contact">電話預訂</a>
+                            <a class="bento" href="#allmenu">其他便當</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/bg_3.png" />
+                    <div class="text">
+                        <p class="hot">熱⬦門⬦推⬦薦</p>
+                        <h1>牛腩燴飯</h1>
+                        <h6>精選牛腩經巧手烹調，入口即化，搭配香氣十足的燴汁，每一口都是滿滿的幸福。是味蕾的極致享受，美味的燴飯饗宴，絕對是您用餐時光的美好選擇。</h6>
+                        <div class="money">
+                            <p><span class="dollar">$</span><span class="sale">79</span></p>
+                            <p class="price">$90</p>
+                        </div>
+                        <div class="container">
+                            <a class="phone" href="#contact">電話預訂</a>
+                            <a class="bento" href="#allmenu">其他便當</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-prev">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M18.0623 1.64824C18.4529 2.03876 18.4529 2.67193 18.0623 3.06245L8.76944 12.3553L18.0623 21.6482C18.4529 22.0388 18.4529 22.6719 18.0623 23.0624C17.6718 23.453 17.0386 23.453 16.6481 23.0624L6.64812 13.0625C6.25759 12.6719 6.25759 12.0388 6.64812 11.6482L16.6481 1.64824C17.0386 1.25772 17.6718 1.25772 18.0623 1.64824Z"
+                        fill="#DA9647" />
+                </svg>
+            </div>
+            <div class="swiper-next">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6.64836 1.64824C7.03889 1.25771 7.67205 1.25771 8.06258 1.64824L18.0626 11.6482C18.4531 12.0388 18.4531 12.6719 18.0626 13.0624L8.06258 23.0624C7.67205 23.453 7.03889 23.453 6.64836 23.0624C6.25784 22.6719 6.25784 22.0388 6.64836 21.6482L15.9413 12.3553L6.64836 3.06245C6.25784 2.67193 6.25784 2.03876 6.64836 1.64824Z"
+                        fill="#DA9647" />
+                </svg>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- 關於我 -->
+
+    <div class="about" id="about">
+        <h1 class="title">關於我</h1>
+        <h5>料多味美．外食族首選</h5>
+        <div class="container">
+            <div class="pic">
+                <img src="./images/about_left.png" alt="">
+            </div>
+            <div class="middle">
+                <h1>台灣精緻便當</h1>
+                <p>嚴選食材，經濟實惠的台式便當，滿足您的口腹之慾。</p>
+                <a class="phone" href="#contact">電話預訂</a>
+            </div>
+            <div class="pic">
+                <img src="./images/about_right.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 菜單 -->
+
+    <div class="allmenu" id="allmenu">
+        <h1 class="title">烤肉飯．便當</h1>
+        <h5 class="today">便當每日現做，配菜依季節更換</h5>
+        <ul class="list">
+            <li class="card">
+                <div class="No">1 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu01.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>炙烤雞腿飯</h4>
+                    <h5>Grilled Chicken Thigh</h5>
+                </div>
+                <div class="money">
+                    <p class="price">$79</p>
+                </div>
+                <img class="hot" src="./images/hot.png" alt="">
+            </li>
+
+            <li class="card">
+                <div class="No">2 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu02.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>巷口排骨飯</h4>
+                    <h5>Pork Chop</h5>
+                </div>
+                <div class="money">
+                    <p class="price">$90</p>
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="No">3 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu03.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>唐揚雞排飯</h4>
+                    <h5>Chicken Chop</h5>
+                </div>
+                <div class="money">
+                    <p class="price">$90</p>
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="No">4 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu04.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>熱炒三杯雞</h4>
+                    <h5>Three-cup Chicken</h5>
+                </div>
+                <div class="money">
+                    <p class="price">$90</p>
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="No">5 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu05.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>府城蝦捲飯</h4>
+                    <h5>Shrimp Rolls</h5>
+                </div>
+                <div class="money">
+                    <p class="price">$85</p>
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="No">6 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu06.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>蒲燒鯛魚飯</h4>
+                    <h5>Kabayaki Tilapia Bowl</h5>
+                </div>
+                <div class="money">
+                    <p class="price">$85</p>
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="No">7 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu07.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>塩烤秋刀魚</h4>
+                    <h5>Sanma Shioyaki</h5>
+                </div>
+                <div class="money">
+                    <p class="price">$85</p>
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="No">8 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu08.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>石頭烤肉飯</h4>
+                    <h5>Stone Grilled Meat</h5>
+                </div>
+                <div class="money">
+                    <p class="price">$90</p>
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="No">9 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu09.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>主廚牛腩燴飯</h4>
+                    <h5>Beef Brisket </h5>
+                </div>
+                <div class="money">
+                    <p class="price">$90</p>
+                </div>
+                <img class="hot" src="./images/hot.png" alt="">
+            </li>
+
+            <li class="card">
+                <div class="No">10 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu10.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>韓式泡菜豬肉飯</h4>
+                    <h5>Kimchi Pork Belly </h5>
+                </div>
+                <div class="money">
+                    <p class="price">$90</p>
+                </div>
+                <img class="hot" src="./images/hot.png" alt="">
+            </li>
+
+            <li class="card">
+                <div class="No">11 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu11.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>咖哩雞肉飯</h4>
+                    <h5>Rice With Curry Chicken</h5>
+                </div>
+                <div class="money">
+                    <p class="price">$85</p>
+                </div>
+            </li>
+
+            <li class="card">
+                <div class="No">12 號餐</div>
+                <div class="pic">
+                    <img src="./images/menu12.png" alt="">
+                </div>
+                <div class="name">
+                    <h4>素食(代訂)</h4>
+                    <h5>Vegetarian</h5>
+                </div>
+                <div class="money">
+                    <p class="price">$90</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <!-- 特色 -->
+    <div class="excellent">
+        <ul class="list">
+            <li class="card">
+                <div class="pic">
+                    <img src="./images/icon_fresh.png" alt="">
+                </div>
+                <h3>在地好米<br />季節鮮食</h3>
+            </li>
+            <li class="card">
+                <div class="pic">
+                    <img src="./images/icon_clean.png" alt="">
+                </div>
+                <h3>衛生管理<br />品質把關</h3>
+            </li>
+
+            <li class="card">
+                <div class="pic">
+                    <img src="./images/icon_today.png" alt="">
+                </div>
+                <h3>當天現做<br />安心食材</h3>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 預訂便當 -->
+    <div class="contact" id="contact">
+        <h1 class="title">聯絡我們</h1>
+        <h5>內湖區 5 個以上即可外送，其他區 10 個以上即可外送</h5>
+        <ul class="list">
+            <li class="phone">
+                <div class="container">
+                    <p>外送一線</p>
+                    <h2>02-2790-8585</h2>
+                </div>
+                <a class="phonebt" href="tel:+886-2-2790-8585">
+                    <img src="./images/icon_phone.png" alt="">
+                </a>
+            </li>
+            <li class="phone">
+                <div class="container">
+                    <p>外送二線</p>
+                    <h2>02-2790-1351</h2>
+                </div>
+                <a class="phonebt" href="tel:+886-2-2790-1351">
+                    <img src="./images/icon_phone.png" alt="">
+                </a>
+            </li>
+            <li class="phone">
+                <div class="container">
+                    <p>外送三線</p>
+                    <h2>02-2790-1381</h2>
+                </div>
+                <a class="phonebt" href="tel:+886-2-2790-1381">
+                    <img src="./images/icon_phone.png" alt="">
+                </a>
+            </li>
+        </ul>
+        <h4 class="add">台北市內湖區成功路4段214巷2弄1號</h4>
+    </div>
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <img src="./images/footer.png" alt="">
+            <div class="text">
+                <h1>大牌烤肉飯．便當</h1>
+                <h4>匠心精神，致力於追求極致美味，為您精心打造一份兼具色香味的便當。</h4>
+            </div>
+        </div>
+        <p>Copyright © 2017 Da-Pai all rights reserved.</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="./js/all.js"></script>
+    <script src="./js/online.js"></script>
+    <!-- 滾動視差/淡入淡出 -->
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/mygasp.js"></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            effect: "fade",
+            // ↓ 按到最後一張時，再循環到第一張
+            loop: true,
+            // ↓ 自動播放
+            autoplay: {
+                delay: 5000,
+            },
+            navigation: {
+                nextEl: ".swiper-next",
+                prevEl: ".swiper-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

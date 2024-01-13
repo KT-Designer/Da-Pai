@@ -1,0 +1,1048 @@
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@500;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+  html {
+      font-size: 24px;
+      /* 讓置頂鍵會自然滾動 */
+      scroll-behavior: smooth;
+  }
+
+
+  body,
+  html {
+      overflow-x: hidden;
+  }
+
+
+
+
+  /* 捲軸 */
+  ::-webkit-scrollbar {
+      width: 6px;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+      background-color: var(--black-color);
+
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: var(--yellow-color);
+  }
+
+
+
+  body {
+      background-image: url(../images/bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+  }
+
+  :root {
+      --white-color: #ffffff;
+      --black-color: #111111;
+      --yellow-color: #DA9647;
+      --red-color: #97071A;
+      --card-color: #1F1F1F;
+
+  }
+
+
+
+  /* Header */
+  .topbar {
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Noto Sans TC';
+      font-weight: 200;
+      position: fixed;
+      height: 44px;
+      width: 100%;
+      color: var(--white-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid #ffffff28;
+      z-index: 2;
+
+  }
+
+  .topbar img {
+      max-width: 20px;
+  }
+
+
+  #mymenu,
+  #close,
+  .nav-board {
+      display: none;
+  }
+
+
+
+
+  .header {
+      position: fixed;
+      top: 44px;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 6%;
+      background-color: none;
+      transition: 0.5s ease-in-out;
+      width: 100%;
+      box-sizing: border-box;
+      color: var(--white-color);
+      z-index: 2;
+  }
+
+  .logo,
+  .navbar,
+  .board {
+      flex-basis: 33.3%;
+  }
+
+  .header .logo img {
+      padding: 10px;
+      max-width: 180px;
+      /* 配合js捲動時有過程動畫 */
+      transition: max-width 0.5s;
+  }
+
+  /* 配合js捲動時有過程動畫 */
+  .header.scrolled .logo img {
+      padding: 10px;
+      max-width: 100px;
+  }
+
+  .header .board {
+      display: flex;
+      justify-content: flex-end;
+
+
+
+  }
+
+  .navbar {
+      width: 100%;
+  }
+
+  /* 配合JS用*/
+  .header.scrolled {
+      background-color: var(--black-color);
+      top: 0px;
+  }
+
+  .header ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      column-gap: 40px;
+  }
+
+
+
+  .header ul li a {
+      text-decoration: none;
+      color: var(--white-color);
+      transition: 0.5s;
+      font-size: 16px;
+  }
+
+  .header ul li a:hover {
+      color: var(--yellow-color);
+  }
+
+  .header .billboard {
+      background-color: var(--red-color);
+      color: var(--white-color);
+      font-family: 'Noto Serif TC';
+      font-weight: 800;
+      font-size: 20px;
+      width: 200px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      letter-spacing: 2px;
+
+  }
+
+
+  /* Hero */
+  .swiper {
+      width: 100%;
+      height: 100%;
+  }
+
+  .swiper-slide {
+      background-position: center;
+      background-size: contain;
+  }
+
+  .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100dvh;
+      object-fit: cover;
+      transition: transform 6s ease;
+  }
+
+
+  .swiper-slide-active img {
+      transform: scale(1.1);
+  }
+
+
+
+
+
+  .swiper-wrapper .text {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+  }
+
+  .text {
+      color: var(--white-color);
+      max-width: 700px;
+      width: 100%;
+      margin: 20px;
+  }
+
+  .mySwiper .hot {
+      font-size: 1.2rem;
+      color: var(--yellow-color);
+      margin-bottom: 10px;
+  }
+
+  .mySwiper h1 {
+      font-family: 'Noto Serif TC';
+      font-size: 3.9rem;
+      font-weight: 700;
+
+      margin-bottom: 20px;
+  }
+
+  .mySwiper h6 {
+      font-size: 0.8rem;
+      font-family: 'Noto Sans TC';
+      font-weight: 100;
+      line-height: 1.5;
+      margin-bottom: 36px;
+      text-align: justify;
+  }
+
+  .mySwiper .money {
+      display: flex;
+      align-items: end;
+      margin-bottom: 34px;
+      font-family: 'Roboto';
+  }
+
+  .mySwiper .money .dollar {
+      font-size: 1.87rem;
+  }
+
+  .mySwiper .money .sale {
+      font-size: 3.8rem;
+      font-weight: 600;
+  }
+
+  .mySwiper .money .price {
+      font-size: 1.4rem;
+      color: var(--red-color);
+      text-decoration: line-through;
+      font-weight: 500;
+  }
+
+  .mySwiper .container {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+  }
+
+  .mySwiper .phone,
+  .mySwiper .bento {
+      font-family: 'Noto Sans TC';
+      font-size: 16px;
+      width: 174px;
+      height: 50px;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 50px;
+      text-decoration: none;
+  }
+
+  .mySwiper .phone {
+      background-color: var(--yellow-color);
+      color: var(--black-color);
+      transition: 0.5s;
+  }
+
+  .mySwiper .phone:hover {
+      background-color: var(--black-color);
+      color: var(--white-color);
+  }
+
+
+  .mySwiper .bento {
+      color: var(--yellow-color);
+      border: 1px solid var(--yellow-color);
+  }
+
+  .mySwiper .bento:hover {
+      background-color: var(--black-color);
+  }
+
+
+  /* 上下頁鍵 */
+  .swiper-next,
+  .swiper-prev {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      transform: rotate(-45deg);
+      padding: 10px;
+      border: 1px solid var(--yellow-color);
+  }
+
+
+  .swiper-next:hover,
+  .swiper-prev:hover {
+      background-color: var(--yellow-color);
+      transition: 0.7;
+
+  }
+
+  .swiper-prev:hover path,
+  .swiper-next:hover path {
+      fill: var(--black-color);
+  }
+
+
+  .swiper-next {
+      position: absolute;
+      top: 50%;
+      right: 6%;
+      z-index: 2;
+  }
+
+  .swiper-prev {
+      position: absolute;
+      top: 50%;
+      left: 6%;
+      z-index: 2
+  }
+
+  .swiper-next svg,
+  .swiper-prev svg {
+      transform: rotate(45deg);
+
+  }
+
+
+  /* 關於我 */
+  .about,
+  .allmenu,
+  .contact,
+  footer {
+      text-align: center;
+      padding-top: 10%;
+
+
+  }
+
+  .about .title,
+  .allmenu .title,
+  .contact .title {
+      font-size: 1.5rem;
+      font-family: 'Noto Sans TC';
+      font-weight: 400;
+      color: var(--yellow-color);
+      margin-bottom: 12px;
+
+  }
+
+  .about h5,
+  .allmenu .today,
+  .contact h5 {
+      font-size: 0.75rem;
+      font-family: 'Noto Sans TC';
+      color: var(--white-color);
+      font-weight: 200;
+      margin-bottom: 4%;
+      line-height: 1.5;
+      padding: 0px 20px;
+  }
+
+
+  .about .container {
+      max-width: 1120px;
+      display: flex;
+      margin-top: 62px;
+      justify-content: center;
+      align-items: stretch;
+      gap: 16px;
+      padding: 16px;
+      margin: auto;
+  }
+
+  .about .pic,
+  .about .middle {
+      flex-basis: calc(33.3% - 16px);
+      /* 等比例縮放，跟其他圖片寬高一致 */
+      aspect-ratio: 9/11;
+  }
+
+  .about .pic {
+      overflow: hidden;
+  }
+
+  .about .pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 4s;
+  }
+
+
+  .about .pic:hover img {
+      overflow: hidden;
+      transform: scale(1.1);
+
+  }
+
+
+
+
+
+  .about .middle {
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 24px;
+  }
+
+
+
+  .about .middle h1 {
+      font-size: 1.3rem;
+      color: var(--white-color);
+  }
+
+  .about .middle p {
+      font-size: 0.6rem;
+      color: var(--white-color);
+      line-height: 1.5;
+      padding: 0px 50px;
+
+  }
+
+  .about .middle .phone {
+      font-size: 18px;
+      color: var(--black-color);
+      background-color: var(--yellow-color);
+      width: 180px;
+      height: 50px;
+      border-radius: 4px;
+      line-height: 50px;
+      transition: 0.5s;
+      text-decoration: none;
+  }
+
+  .about .middle .phone:hover {
+      background-color: var(--black-color);
+      color: var(--white-color);
+  }
+
+
+  /* 菜單 */
+  .allmenu .list {
+      max-width: 1068px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 12px;
+      justify-content: center;
+      margin: auto;
+      padding: 8px;
+  }
+
+
+
+  .allmenu .list .card {
+      flex-basis: calc(25% - 12px);
+      background-color: var(--card-color);
+      color: var(--white-color);
+      padding: 16px 0px 16px 0px;
+      border-radius: 6px;
+      box-shadow: 2px 5px 17px 0px #000;
+      transition: 0.5s;
+      position: relative;
+  }
+
+  .allmenu .list .card .hot {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+  }
+
+  .allmenu .list .card:hover {
+      background-color: var(--yellow-color);
+  }
+
+
+
+  .allmenu .No {
+      font-size: 0.67rem;
+      width: 80px;
+      padding: 10px 6px;
+      background-color: var(--black-color);
+
+  }
+
+
+
+  .allmenu .card .pic img {
+      max-width: 200px;
+      width: 100%;
+  }
+
+  .allmenu .card .name {
+      padding: 0px 18px;
+      transition: 0.5s;
+      text-align: start;
+  }
+
+  .allmenu .card h4 {
+      font-size: 0.7rem;
+      font-family: 'Noto Sans TC';
+      font-weight: 500;
+
+
+  }
+
+  .allmenu .card h5 {
+      margin-top: 5px;
+      font-size: 0.5rem;
+      font-family: 'Roboto';
+      font-weight: 400;
+      transition: 0.5s;
+      height: 1.2rem;
+
+  }
+
+  .allmenu .list .card:hover .name,
+  .allmenu .list .card:hover h5 {
+      color: var(--black-color);
+  }
+
+
+
+
+  .allmenu .card .money {
+      display: flex;
+      justify-content: end;
+      padding: 0px 18px;
+  }
+
+  .allmenu .card .money .price {
+      font-size: 0.67rem;
+      font-weight: 700;
+      font-family: 'Noto Sans TC';
+      width: 66px;
+      padding: 10px;
+      background-color: var(--yellow-color);
+      color: var(--black-color);
+      border-radius: 4px;
+      transition: 0.5s;
+  }
+
+  .allmenu .list .card:hover .price {
+      background-color: var(--black-color);
+      color: var(--white-color);
+  }
+
+
+  /* 特色 */
+
+  .excellent {
+      margin-top: 10%;
+      padding: 0px 14px;
+  }
+
+
+  .excellent .list {
+      max-width: 926px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: auto;
+  }
+
+  .excellent .list .card {
+      flex-basis: calc(33.3% - 20px);
+      color: var(--white-color);
+      background: rgba(255, 255, 255, 0.08);
+      padding: 30px 80px;
+      text-align: center;
+
+  }
+
+
+  .excellent .list .pic img {
+      max-width: 130px;
+      width: 100%;
+  }
+
+  .excellent .list .card h3 {
+      font-size: 0.83rem;
+      line-height: 1.5;
+  }
+
+
+  /* 預訂便當 */
+  .contact .list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0px 16px;
+      margin: auto;
+  }
+
+  .contact .list .phone .phonebt {
+      display: none;
+  }
+
+  .contact .phone {
+      display: flex;
+      gap: 21px;
+      background-color: var(--black-color);
+      padding: 20px 30px;
+
+  }
+
+  .contact .list .phone .container {
+      text-align: start;
+
+  }
+
+  .contact .list .phone .container p {
+      color: var(--white-color);
+      font-size: 0.67rem;
+      font-family: 'Noto Sans TC';
+      margin-bottom: 6px;
+
+  }
+
+  .contact .list .phone .container h2 {
+      color: var(--yellow-color);
+      font-size: 1.25rem;
+      font-family: 'Roboto';
+      font-weight: 400;
+  }
+
+
+
+  .contact .add {
+      font-size: 0.7rem;
+      color: var(--white-color);
+      margin-top: 60px;
+      font-family: 'Noto Sans TC';
+      font-weight: 300;
+  }
+
+
+
+  /* footer */
+
+
+  footer .container {
+      position: relative;
+  }
+
+  footer .container img {
+      width: 100%;
+      /* 解決底部縫隙，也可以用 /* display: block; */
+      vertical-align: top;
+
+  }
+
+  footer .container .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--white-color);
+      text-align: center;
+      max-width: 560px;
+
+  }
+
+
+  footer .container .text h1 {
+      font-size: 1.67rem;
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      text-shadow: 0px 1px 5px #000, 0px 4px 9px #000;
+
+  }
+
+  footer .container h4 {
+      font-size: 0.9rem;
+      text-shadow: 0px 1px 5px #000, 0px 4px 9px #000;
+      line-height: 1.5;
+  }
+
+  footer p {
+      font-size: 0.58rem;
+      color: var(--white-color);
+      padding: 16px;
+      width: 100%;
+      font-family: 'Roboto';
+      font-weight: 300;
+      background-color: var(--black-color);
+
+  }
+
+
+
+  @media screen and (max-width: 1024px) {
+
+      /* hero */
+      .swiper-wrapper .text {
+          top: 60%;
+
+
+      }
+
+
+  }
+
+
+
+  @media screen and (min-width:768px) {
+
+      /* Header */
+      /* 選單雙底線 */
+      .header ul .overline {
+          position: relative;
+          max-width: max-content;
+
+      }
+
+      .header ul .overline::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -15px;
+          width: 100%;
+          height: 5px;
+          border-block: 1px solid var(--yellow-color);
+          transform: scaleX(0.2);
+          opacity: 0;
+          transition: 500ms ease;
+
+      }
+
+      .header ul .overline:hover::after,
+      .header ul .overline:focus::after {
+          transform: scaleX(1);
+          opacity: 1;
+          color: var(--yellow-color)
+      }
+
+      /* 選單 */
+      /* 配合JQ使用，特別設一個.active的樣式 */
+      .header ul .overline.active {
+          color: var(--yellow-color);
+      }
+
+      .header ul .overline.active::after {
+          transform: scaleX(1);
+          opacity: 1;
+      }
+
+
+
+
+
+  }
+
+
+
+
+
+  @media screen and (max-width: 992px) {
+
+      .swiper-prev,
+      .swiper-next {
+          display: none;
+      }
+  }
+
+
+
+
+
+
+
+  @media screen and (max-width: 768px) {
+
+      html {
+          font-size: 22px;
+
+      }
+
+      /* header */
+      #mymenu,
+      #close {
+          font-size: 24px;
+          width: 26px;
+          height: 26px;
+      }
+
+
+      .header .board {
+          display: none;
+      }
+
+      #mymenu,
+      #close,
+      .nav-board {
+          display: block;
+      }
+
+      .header .off {
+          padding: 16px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+      }
+
+
+      .navbar {
+          position: absolute;
+          top: 0;
+          /*     預設未移入 */
+          left: -100%;
+          width: 100%;
+          height: 100vh;
+          /*     移入速度 */
+          transition: 0.6s ease;
+          background-color: var(--black-color);
+          padding-top: 10px;
+
+      }
+
+      /* 配合JS收合 */
+      .navbar.menued {
+          /*     移入 */
+          left: 0;
+      }
+
+      /* 配合JS收合 */
+      .navbar.closed {
+          left: -100%;
+      }
+
+      .header ul {
+          flex-direction: column;
+          text-align: left;
+          row-gap: 30px;
+          margin: 0px 30px;
+      }
+
+      .header ul li {
+          border-bottom: 1px solid #ffffff2f;
+          padding-bottom: 8px;
+      }
+
+      .header ul .nav-board {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 30px;
+          border-bottom: none;
+      }
+
+      /* hero */
+      .text {
+          width: 66%;
+      }
+
+      .mySwiper .hot {
+          font-size: 0.9rem;
+
+      }
+
+      .mySwiper h1 {
+          font-size: 2.3rem;
+
+      }
+
+
+      /* 菜單 */
+      .allmenu .list .card {
+          flex-basis: calc(33.33% - 12px);
+      }
+
+
+
+
+      /* 預訂便當 */
+      .contact .list {
+          flex-direction: column;
+          max-width: 500px;
+      }
+
+      .contact .list .phone .phonebt {
+          display: block;
+      }
+
+      .contact .list .phone {
+          justify-content: center;
+      }
+
+
+      .contact .list .phone .phonebt {
+          border-radius: 50px;
+          background-color: var(--yellow-color);
+          width: 54px;
+          height: 54px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+
+  }
+
+  @media screen and (max-width: 576px) {
+
+
+      /* hero */
+      .text {
+          width: 80%;
+          margin: 8px;
+      }
+
+
+      .mySwiper .hot {
+          font-size: 0.9rem;
+
+      }
+
+      .mySwiper h1 {
+          font-size: 1.9rem;
+
+      }
+
+      .mySwiper h6 {
+          font-size: 0.7rem;
+
+      }
+
+
+
+      /* 關於我 */
+
+      .about .container {
+          flex-direction: column;
+
+      }
+
+      .about .middle {
+          flex-basis: auto;
+
+      }
+
+      .about .middle h1 {
+          font-size: 2.0rem;
+      }
+
+      .about .middle p {
+          font-size: 0.8rem;
+
+
+      }
+
+
+      /* 菜單 */
+      .allmenu .list .card {
+          flex-basis: calc(50% - 12px);
+      }
+
+      /* 特色 */
+      .excellent .list {
+          flex-direction: column;
+
+      }
+
+      .excellent .list .card h3 {
+          font-size: 1rem;
+      }
+
+      .excellent .list .card h3 br {
+          display: none;
+      }
+
+
+
+
+      /* footer */
+      footer .container .text h1 {
+          font-size: 1rem;
+
+      }
+
+      footer .container h4 {
+          font-size: 0.6rem;
+
+      }
+
+
+
+
+  }
+
+  @media screen and (max-width: 375px) {
+      html {
+          font-size: 19px;
+      }
+
+
+      /* 菜單 */
+      .allmenu .list .card .hot {
+          width: 56px;
+
+      }
+
+
+      /* 特色 */
+      .excellent .list .card h3 {
+          font-size: 0.8rem;
+      }
+
+
+      /* footer */
+      footer .container .text h1 {
+          font-size: 1rem;
+
+      }
+
+      footer .container h4 {
+          font-size: 0.6rem;
+
+      }
+
+
+  }
