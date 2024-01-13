@@ -8,7 +8,7 @@ window.addEventListener("scroll", () => {
         logo.style.maxWidth = "100px";
     } else {
         navbar.classList.remove("scrolled");
-        logo.style.maxWidth = "180px";
+        logo.style.maxWidth = "160px";
     }
 });
 
