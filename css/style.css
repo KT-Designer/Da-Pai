@@ -218,14 +218,19 @@
       font-size: 1.2rem;
       color: var(--yellow-color);
       margin-bottom: 10px;
+      opacity: 0;
+
+
   }
 
   .mySwiper h1 {
       font-family: 'Noto Serif TC';
       font-size: 3.9rem;
       font-weight: 700;
-
       margin-bottom: 20px;
+      opacity: 0;
+
+
   }
 
   .mySwiper h6 {
@@ -235,6 +240,9 @@
       line-height: 1.5;
       margin-bottom: 36px;
       text-align: justify;
+      opacity: 0;
+
+
   }
 
   .mySwiper .money {
@@ -242,6 +250,9 @@
       align-items: end;
       margin-bottom: 34px;
       font-family: 'Roboto';
+      opacity: 0;
+
+
   }
 
   .mySwiper .money .dollar {
@@ -260,10 +271,47 @@
       font-weight: 500;
   }
 
+
+  /* 淡進動畫 */
+  .hero .mySwiper .swiper-slide .fadein {
+      animation: fadein 1s ease forwards;
+  }
+
+  @keyframes fadein {
+      0% {
+          transform: translateY(30px);
+          opacity: 0;
+      }
+
+      100% {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+
+  .hero .mySwiper .swiper-slide .H1 {
+      animation-delay: 0ms;
+  }
+
+  .hero .mySwiper .swiper-slide .H2 {
+      animation-delay: 500ms;
+  }
+
+  .hero .mySwiper .swiper-slide .H3 {
+      animation-delay: 1000ms;
+  }
+
+  /* 淡進動畫_END */
+
+
+
+
   .mySwiper .container {
       display: flex;
       justify-content: center;
       gap: 12px;
+      opacity: 0;
+
   }
 
   .mySwiper .phone,
