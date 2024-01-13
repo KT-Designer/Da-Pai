@@ -709,6 +709,11 @@
   }
 
 
+  .contact h5 br {
+      display: none;
+  }
+
+
 
   /* footer */
 
@@ -1043,6 +1048,11 @@
           display: none;
       }
 
+
+      /* 預訂便當 */
+      .contact h5 br {
+          display: block;
+      }
 
 
 
