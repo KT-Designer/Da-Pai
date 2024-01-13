@@ -69,7 +69,7 @@ $(document).ready(function () {
     }
 
     // 初始化時調整一次
-    adjustMiddleHeight();
+    // adjustMiddleHeight();
 
 
 
