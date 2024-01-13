@@ -61,16 +61,55 @@
       width: 100%;
       color: var(--white-color);
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 6px;
+      padding: 0px 6%;
+      box-sizing: border-box;
       border-bottom: 1px solid #ffffff28;
       z-index: 2;
+  }
 
+  .topbar .container {
+      flex-basis: 33.33%;
+  }
+
+  .topbar .fan {
+      text-align: start;
+  }
+
+
+  .topbar .fan a {
+      margin-right: 6px;
+      text-decoration: none;
+  }
+
+  .topbar .fan path {
+      fill: var(--white-color);
+      transition: 0.7s;
+  }
+
+
+  .topbar .fan svg:hover path {
+      fill: var(--yellow-color);
+  }
+
+
+
+  .topbar .time {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
   }
 
   .topbar img {
       max-width: 20px;
+  }
+
+  .topbar .add {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 4px;
   }
 
 
@@ -150,6 +189,9 @@
       color: var(--white-color);
       transition: 0.5s;
       font-size: 16px;
+      font-family: 'Noto Sans TC';
+      font-weight: 400;
+
   }
 
   .header ul li a:hover {
@@ -700,14 +742,6 @@
 
 
 
-  .contact .add {
-      font-size: 0.7rem;
-      color: var(--white-color);
-      margin-top: 60px;
-      font-family: 'Noto Sans TC';
-      font-weight: 300;
-  }
-
 
   .contact h5 br {
       display: none;
@@ -769,7 +803,24 @@
 
 
 
+
+
+
+
   @media screen and (max-width: 1024px) {
+
+      /* Header */
+
+      .topbar .container {
+          flex-basis: 100%;
+      }
+
+      .topbar .fan,
+      .topbar .add {
+          display: none;
+      }
+
+
 
       /* hero */
       .swiper-wrapper .text {
