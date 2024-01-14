@@ -396,8 +396,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 30px;
-      height: 30px;
+      width: 23px;
+      height: 23px;
       transform: rotate(-45deg);
       padding: 10px;
       border: 1px solid var(--yellow-color);
