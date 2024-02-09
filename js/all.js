@@ -55,7 +55,7 @@ $(document).ready(function () {
     });
 
     $('#close').on('click', function () {
-        $('.navbar').toggleClass('closed');
+        $('.navbar').toggleClass('closed').removeClass('menued');
     });
 
 
