@@ -14,20 +14,6 @@ window.addEventListener("scroll", () => {
 
 
 
-// 點選漢堡後自動顯示menu(JS寫法)
-// document.getElementById('mymenu').addEventListener('click', function () {
-//     var navbar = document.querySelector('.navbar');
-//     navbar.classList.toggle('menued');
-//     navbar.classList.remove('closed');
-// });
-
-// document.getElementById('close').addEventListener('click', function () {
-//     document.querySelector('.navbar').classList.toggle('closed');
-// });
-
-
-
-
 
 
 
